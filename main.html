@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Testeroony</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- picture ideas: http://www.nielsen.com/us/en/insights/news/2016/brand-equity-top-brands-consumers-associate-with-positive-health-wellness-impact.html -->
+  <!-- picture source: pexels -->
+  <style>
+    img{
+      width: 100%;
+      height: 100%;
+      cursor:pointer;
+      z-index: -1;
+      border-radius: 5px;
+    }
+    img:hover{
+      opacity: 0.5;
+    }
+    header{
+      height: 15em;
+      background: linear-gradient(to right, rgb(64,224,208), rgb(0,206,209));
+      opacity: 0.5;
+      z-index: -1;
+    }
+    /* .col-sm-6{
+      width: 100%;
+      padding: 10%;
+    } */
+    body{
+      box-shadow: 0 -5px 5px -5px rgba(0, 0, 0, 0.2);
+    }
+
+    #number_div{
+      background-color: black;
+    }
+    .row{
+      width: 100%;
+      padding-left: 10%;
+      padding-right: 10%;
+    }
+
+    .picture_card {
+      position: fixed;
+      box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
+      /* margin-bottom: -11em; */
+      /* border: 10px red; */
+      width: 35%;
+      height: 50%;
+      top: 5em;
+      background-color: #3A3A3A;
+      border-radius: 5px;
+    }
+
+    #pc1{
+      position: absolute;
+      right: 10%;
+    }
+
+    #pc2{
+      position: absolute;
+      left: 10%;
+    }
+
+    #container {
+        position: fixed;
+        bottom: 5%;
+        width: 100%;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    #bar {
+        height: 1.7em;
+        width: 100%;
+        background-color: white;
+        border: 5px solid #00CED1;
+        border-radius: 50px;
+    }
+
+    #progress {
+        height: 0.25em;
+        width: 0%;
+        background: linear-gradient(to right, rgb(64,224,208), rgb(0,206,209));
+        transition: 0.3s ease;
+        border-radius: 50px;
+        text-align: center;
+        vertical-align: middle;
+        font-size: 4em;
+    }
+    body {
+      height: 100%;
+      width: 100%;
+    }
+
+  #countdown {
+    position: relative;
+    margin: auto;
+    margin-top: 100px;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    visibility: visible;
+  }
+
+  #countdown-number {
+    color: #00CED1;
+    display: inline-block;
+    line-height: 40px;
+  }
+
+  svg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    transform: rotateY(-180deg) rotateZ(-90deg);
+  }
+
+  circle {
+    stroke-dasharray: 113px;
+    stroke-dashoffset: 0px;
+    stroke-linecap: round;
+    stroke-width: 2px;
+    stroke: #00CED1;
+    fill: none;
+    animation: countdown 3s linear 14 forwards;
+    animation-play-state: running;
+  }
+
+  @keyframes countdown {
+    from {
+      stroke-dashoffset: 0px;
+    }
+    to {
+      stroke-dashoffset: 113px;
+    }
+  }
+
+  @keyframes check {
+      0% {
+          height: 0;
+          width: 0;
+      }
+      33.3333% {
+          width: 10px;
+          height: 0;
+      }
+  }
+
+  .check{
+    width: 0px;
+    height: 0px;
+  }
+
+  .checkmark {
+      display: block;
+      height: 200px;
+      position: relative;
+      width: 200px;
+  }
+
+  .checkmark:after {
+      animation: check .5s;
+      rotate(135deg);
+        transform: scaleX(-1) rotate(135deg);
+        transform-origin: left top;
+        border-right: 10px solid #00CED1;
+        border-top: 10px solid #00CED1;
+        content: '';
+        display: block;
+        height: 40px;
+        position: fixed;
+        bottom: 20%;
+        left:50%;
+        width: 20px;
+  }
+
+  footer{
+    height: 50%;
+  }
+
+  </style>
+</head>
+<body>
+  <header>
+    <p id="extId_placeholder">extensionId12345</p>
+  </header>
+  <div class="container text-center" id="header">
+    <div class="row">
+      <!-- <div class="col-sm-6"> -->
+        <div class="picture_card" id="pc1">
+          <img src="img/0.jpeg" id="photo1" alt="681846">
+        </div>
+      <!-- </div> -->
+      <!-- <div class="col-sm-6"> -->
+        <div class="picture_card" id="pc2">
+          <img src="img/1.jpeg" id="photo2" alt="685533">
+        </div>
+      <!-- </div> -->
+    </div>
+  </div>
+  <form action="insert.php" method="post" name="myForm">
+    <input type="hidden" name="qu1" id="qu1" value=69>
+    <input type="hidden" name="qu2" id="qu2" value=69>
+    <input type="hidden" name="qu3" id="qu3" value=69>
+    <input type="hidden" name="qu4" id="qu4" value=69>
+    <input type="hidden" name="qu5" id="qu5" value=69>
+    <input type="hidden" name="qu6" id="qu6" value=69>
+    <input type="hidden" name="qu7" id="qu7" value=69>
+    <input type="hidden" name="qu8" id="qu8" value=69>
+    <input type="hidden" name="qu9" id="qu9" value=69>
+    <input type="hidden" name="qu10" id="qu10" value=69>
+    <input type="hidden" name="qu11" id="qu11" value=69>
+    <input type="hidden" name="qu12" id="qu12" value=69>
+    <input type="hidden" name="qu13" id="qu13" value=69>
+    <input type="hidden" name="qu14" id="qu14" value=69>
+    <input type="hidden" name="extensionId" id="extensionId" value="extensionId">
+  </form>
+  <footer>
+    <div id="countdown">
+      <div id="countdown-number"></div>
+      <svg>
+        <circle r="18" cx="20" cy="20"></circle>
+      </svg>
+    </div>
+    <div class="check" id="checkmark"></div>
+    <script type="text/javascript" src="script.js"></script>
+      <div id="container">
+        <div id="bar">
+          <div id="progress"></div>
+        </div>
+      </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Congratulations you surveyed yourself</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </script>
+  <style>
+    html{
+      height: 100%;
+    }
+    body{
+      height: 100%;
+      background: linear-gradient(to right, rgb(64,224,208), rgb(0,206,209));
+      /* background: linear-gradient(to right, rgb(64,224,208), rgb(0,206,209)); */
+      /* opacity: 0.5; */
+    }
+    @keyframes after {
+      0%{
+        top: 40%;
+        left: 40%;
+        height: 10%;
+        width: 20%;
+        visibility: visible;
+        box-shadow: 0;
+
+      }
+      90% {
+        width: 65%;
+        height: 82%;
+        top: 8.5%;
+        left: 17.5%;
+        visibility: visible;
+      }
+      100% {
+        width: 70%;
+        height: 90%;
+        top: 5%;
+        left: 15%;
+        visibility: hidden;
+      }
+    }
+
+    @keyframes after_container {
+      0%{
+        top: 40%;
+        left: 40%;
+        height: 10%;
+        width: 20%;
+        visibility: hidden;
+        box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
+      }
+      90% {
+        width: 65%;
+        height: 82%;
+        top: 8.5%;
+        left: 17.5%;
+        visibility: hidden;
+      }
+      100% {
+        width: 70%;
+        height: 90%;
+        top: 5%;
+        left: 15%;
+        visibility: visible;
+        background-color: white;
+        box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+      }
+    }
+
+    .ty_message{
+      position: absolute;
+      top: 40%;
+      left: 40%;
+      height: 10%;
+      width: 20%;
+      background-color: white;
+      box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
+      border-radius: 5px;
+      animation-name: after;
+      animation-duration: 2s;
+      animation-iteration-count: 1;
+      animation-delay: 2s;
+      animation-fill-mode: forwards;
+      animation-timing-function: ease-in-out;
+    }
+
+    .container{
+      position: absolute;
+      visibility: hidden;
+      top: 40%;
+      left: 40%;
+      height: 10%;
+      width: 20%;
+      animation-name: after_container;
+      animation-duration: 2s;
+      animation-iteration-count: 1;
+      animation-delay: 2s;
+      animation-fill-mode: forwards;
+      animation-timing-function: ease-in-out;
+    }
+    /* .ty_message:after{
+      animation: check .5s;
+        display: block;
+        height: 80%;
+        position: fixed;
+        bottom: 20%;
+        left:50%;
+        width: 40%;
+    } */
+
+  </style>
+</head>
+<body>
+  <div class="ty_message">
+    thanks bruh!
+  </div>
+  <div class="container text-center" id="header">
+    <h3>Surveying Rick James Bitch</h3>
+      <form class="form" action="thankyou.html" method="post">
+          <div class="slider">
+            <div class="qDiv">this is a really really long looooooooonnngggg asss question?</div>
+            <input class="range" type="range" value="3" min="0" max="10">
+            <span class="value">3</span>
+          </div>
+          <div class="slider">
+            <div class="qDiv">[question]</div>
+            <input class="range" type="range" value="5" min="0" max="10">
+            <span class="value">5</span>
+          </div>
+          <div class="slider">
+            <div class="qDiv">[question]</div>
+            <input class="range" type="range" value="7" min="0" max="10">
+            <span class="value">7</span>
+          </div>
+          <p><div class="submit">
+            <input type="submit" name="submit" value="submit" class="button">
+          </div></p>
+      </form>
+  </div>
+</body>
+</html>

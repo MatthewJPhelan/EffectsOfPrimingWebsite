@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+    @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300);
+
+
+    *{
+    	box-sizing: border-box;
+    	margin: 0;
+    	padding: 0;
+    	font-weight: 300;
+    }
+    *:focus{
+      outline: none;
+    }
+
+    body{
+    	font-family: 'Source Sans Pro', sans-serif;
+    	color: white;
+    	font-weight: 300;
+    }
+
+    h1 {
+      height: 25%;
+    }
+    form {
+      height: 50%;
+    }
+    /* #ln_input{
+      height: 35%;
+      width: 45%;
+      border-color: white;
+      border-radius: 50px;
+      background-color:rgba(250, 250, 250, 0.5); */
+      /* background-color: transparent; */
+      /* opacity: 0.2; */
+      /* text-align: center;
+      color: black;
+      font-size: 14px; */
+    /* } */
+
+    input[type=text], select {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #FFF;
+        border-radius: 5px;
+        background-color: rgb(250,250,250,0.5);
+        box-sizing: border-box;
+        color: #687B7C
+    }
+    /* button{
+      height: 35%;
+      width: 45%;
+      border-radius: 50px;
+      text-align: center;
+      color: black;
+      font-size: 14px;
+      position: relative;
+      bottom: -20px;
+    } */
+    #btn {
+        width: 100%;
+        background-color: #FFF;
+        color: #687B7C;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    #consentbtn {
+        width: 60%;
+        background-color: #FFF;
+        color: #687B7C;
+        padding: 14px 20px;
+        position: relative;
+        left: 20%;
+        top: 10px;
+        border: solid 0.5px #687B7C;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .wrapper{
+    	background: #50a3a2;
+      background: linear-gradient(to right, rgb(64,224,208), rgb(0,206,209));
+    	position: absolute;
+    	top: 50%;
+    	left: 0;
+    	width: 100%;
+    	height: 400px;
+    	margin-top: -200px;
+    	overflow: hidden;
+    }
+    label {
+      position: relative;
+      left: 10px;
+    }
+    .container{
+    	max-width: 600px;
+    	margin: 0 auto;
+    	padding: 80px 50px;
+    	height: 400px;
+    	text-align: center;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.7);
+      transition: opacity 500ms;
+      visibility: hidden;
+      opacity: 0;
+    }
+    .overlay:target {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .popup {
+        margin: 70px auto;
+        padding: 20px;
+        background: #fff;
+        border-radius: 5px;
+        width: 40%;
+        position: relative;
+        transition: all 5s ease-in-out;
+        color: black;
+    }
+
+    .popup .close {
+        position: absolute;
+        top: 17px;
+        right: 30px;
+        transition: all 200ms;
+        font-size: 30px;
+        font-weight: bold;
+        text-decoration: none;
+        color: #333;
+    }
+
+    .content {
+        margin: 5% 0;
+    }
+
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container" id="container">
+        <h1>Welcome</h1>
+    		<form class="form">
+    			<input type="text" id="ln_input" placeholder="Lobby Number"><br>
+    			<button type="button" id="btn">Submit</button>
+    		</form>
+      </div>
+    </div>
+    <div id="popup1" class="overlay">
+    	<div class="popup">
+    		<h2>Here i am</h2>
+    		<a class="close" href="#">&times;</a>
+    		<div class="content">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+            when an unknown printer took a galley of type and scrambled it to make a type
+            specimen book. It has survived not only five centuries, but also the leap
+            into electronic typesetting, remaining essentially unchanged. It was popularised
+            in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+            and more recently with desktop publishing software like Aldus PageMaker including
+            versions of Lorem Ipsum.<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+            when an unknown printer took a galley of type and scrambled it to make a type
+            specimen book. It has survived not only five centuries, but also the leap
+            into electronic typesetting, remaining essentially unchanged. It was popularised
+            in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+            and more recently with desktop publishing software like Aldus PageMaker including
+            versions of Lorem Ipsum.</p>
+    		</div>
+        <p><input type="checkbox" id="consent">
+          <label for="#consent">Agree To The Terms</label>
+        </p>
+        <button type="button" name="button" id="consentbtn" value="agree">I'm Ready</button>
+    	</div>
+    </div>
+  </body>
+  <script type="text/javascript" src="index.js"></script>
+</html>

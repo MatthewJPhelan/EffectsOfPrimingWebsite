@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <style media="screen">
+
+    @keyframes check {
+        0% {
+            height: 0;
+            width: 0;
+        }
+        33.3333% {
+            width: 10px;
+            height: 0;
+        }
+    }
+
+    .check{
+      width: 0px;
+      height: 0px;
+    }
+
+    .checkmark {
+        display: block;
+        height: 200px;
+        position: relative;
+        width: 200px;
+    }
+
+    .checkmark:after {
+        animation: check .5s;
+        rotate(135deg);
+          transform: scaleX(-1) rotate(135deg);
+          transform-origin: left top;
+          border-right: 10px solid #00CED1;
+          border-top: 10px solid #00CED1;
+          content: '';
+          display: block;
+          height: 40px;
+          position: fixed;
+          bottom: 20%;
+          left:50%;
+          width: 20px;
+    }
+  </style>
+  <body>
+    <div class="check" id="checkmark"></div>
+  </body>
+  <script type="text/javascript">
+    document.getElementById('checkmark').className = 'checkmark';
+  </script>
+</html>
